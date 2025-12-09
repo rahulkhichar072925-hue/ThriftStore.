@@ -1,0 +1,732 @@
+import gs_logo from "./gs_logo.jpg"
+import happy_store from "./happy_store.webp"
+import upload_area from "./upload_area.svg"
+import hero_model_img from "./hero_model_img.png"
+import hero_product_img1 from "./hero_product_img1.png"
+import hero_product_img2 from "./hero_product_img2.png"
+import product_img1 from "./product_img1.png"
+import product_img2 from "./product_img2.png"
+import product_img3 from "./product_img3.png"
+import product_img4 from "./product_img4.png"
+import product_img5 from "./product_img5.png"
+import product_img6 from "./product_img6.png"
+import product_img7 from "./product_img7.png"
+import product_img8 from "./product_img8.png"
+import product_img9 from "./product_img9.png"
+import product_img10 from "./product_img10.png"
+import product_img11 from "./product_img11.png"
+import product_img12 from "./product_img12.png"
+import { ClockFadingIcon, HeadsetIcon, SendIcon } from "lucide-react";
+import profile_pic1 from "./profile_pic1.jpg"
+import profile_pic2 from "./profile_pic2.jpg"
+import profile_pic3 from "./profile_pic3.jpg"
+
+export const assets = {
+    upload_area, hero_model_img,
+    hero_product_img1, hero_product_img2, gs_logo,
+    product_img1, product_img2, product_img3, product_img4, product_img5, product_img6,
+    product_img7, product_img8, product_img9, product_img10, product_img11, product_img12,
+}
+
+export const categories = ["Shoes", "Clothes", "Topwear", "Jackets", "Running Shoes", "Sarees","Fashion","Heels","Sneakers","Winter Jacket","Golf Shoes","Sportswear"];
+
+export const dummyRatingsData = [
+    { id: "rat_1", rating: 4.2, review: "I was a bit skeptical at first, but this product turned out to be even better than I imagined. The quality feels premium, it's easy to use, and it delivers exactly what was promised. I've already recommended it to friends and will definitely purchase again in the future.", user: { name: 'Kristin Watson', image: profile_pic1 }, productId: "prod_1", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Jordan Air', category:'Shoes', id:'prod_1'} },
+    { id: "rat_2", rating: 5.0, review: "This product is great. I love it!  You made it so simple. My new site is so much faster and easier to work with than my old site.", user: { name: 'Jenny Wilson', image: profile_pic2 }, productId: "prod_2", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Clothes', category:'Topwear', id:'prod_1'} },
+    { id: "rat_3", rating: 4.1, review: "This product is amazing. I love it!  You made it so simple. My new site is so much faster and easier to work with than my old site.", user: { name: 'Bessie Cooper', image: profile_pic3 }, productId: "prod_3", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Shoes', category:'Shoes', id:'prod_1'} },
+    { id: "rat_4", rating: 5.0, review: "This product is great. I love it!  You made it so simple. My new site is so much faster and easier to work with than my old site.", user: { name: 'Kristin Watson', image: profile_pic1 }, productId: "prod_4", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Running Shoes', category:'Shoes', id:'prod_1'} },
+    { id: "rat_5", rating: 4.3, review: "Overall, I'm very happy with this purchase. It works as described and feels durable. The only reason I didn't give it five stars is because of a small issue (such as setup taking a bit longer than expected, or packaging being slightly damaged). Still, highly recommend it for anyone looking for a reliable option.", user: { name: 'Jenny Wilson', image: profile_pic2 }, productId: "prod_5", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Jacket', category:'Jacket', id:'prod_1'} },
+    { id: "rat_6", rating: 5.0, review: "This product is great. I love it!  You made it so simple. My new site is so much faster and easier to work with than my old site.", user: { name: 'Bessie Cooper', image: profile_pic3 }, productId: "prod_6", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Jacket', category:'Jacket', id:'prod_1'} },
+]
+
+export const dummyStoreData = {
+    id: "store_1",
+    userId: "user_1",
+    name: "Ruhi Shop",
+    description: "At Ruhi's Shop, we believe shopping should be simple, smart, and satisfying. Whether you're hunting for the latest fashion trends, top-notch electronics, home essentials, or unique lifestyle products — we've got it all under one digital roof.",
+    username: "happyshop",
+    address: "3rd Floor, Happy Shop , New Building, 123 street , c sector , Sikar, RJ, IN",
+    status: "approved",
+    isActive: true,
+    logo: happy_store,
+    email: "ruhishop@example.com",
+    contact: "+0 1234567890",
+    createdAt: "2025-09-04T09:04:16.189Z",
+    updatedAt: "2025-09-04T09:04:44.273Z",
+    user: {
+        id: "user_31dOriXqC4TATvc0brIhlYbwwc5",
+        name: "Group 8",
+        email: "user.group8@gmail.com",
+        image: gs_logo,
+    }
+}
+
+export const productDummyData = [
+    {
+        id: "prod_1",
+        name: "Nike Air Max 270",
+        description: " Introducing the debut collaborative project from NIKE. This special edition FuelCell SC Elite design offers an elegant expression of athletic culture, infused with the human emotions – ambition and inspiration – that drive technical high performance.",
+        mrp: 49999,
+        price: 29999,
+        images:  [
+       "/products/Screenshot 2025-12-01 000216.png",
+       "/products/Screenshot 2025-12-01 000149.png",
+       "/products/Screenshot 2025-12-01 000205.png",
+       "/products/Screenshot 2025-12-01 000136.png"    
+       ],
+        category: "Golf Shoes",
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 29 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 29 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_2",
+        name: "Jordan Air Zoom",
+        description: "Introducing the debut collaborative project from JORDAN. This special edition FuelCell SC Elite design offers an elegant expression of athletic culture, infused with the human emotions – ambition and inspiration – that drive technical high performance.",
+        mrp: 59999,
+        price: 39999,
+        images: [
+      "/products/Screenshot 2025-12-01 000919.png",
+      "/products/Screenshot 2025-12-01 000912.png",
+      "/products/Screenshot 2025-12-01 000904.png",
+      "/products/Screenshot 2025-12-01 000925.png"
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Speakers",
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 28 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 28 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_3",
+        name: "Tokyo Fashion Jacket",
+        description:"This Tokyo Fashion Jacket combines contemporary style with functional design, perfect for urban living. Crafted from high-quality materials, it offers both comfort and durability. The sleek silhouette and modern details make it a versatile addition to any wardrobe, suitable for various occasions from casual outings to semi-formal events.",
+        mrp: 69999,
+        price: 49999,
+   images: [
+      "/products/Screenshot 2025-12-01 001140.png",
+      "/products/Screenshot 2025-12-01 001150.png",
+      "/products/Screenshot 2025-12-01 001203.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 27 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 27 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_4",
+        name: "The Northen Face Jacket",
+        description: "This Tokyo Fashion Jacket combines contemporary style with functional design, perfect for urban living. Crafted from high-quality materials, it offers both comfort and durability. The sleek silhouette and modern details make it a versatile addition to any wardrobe, suitable for various occasions from casual outings to semi-formal events.",
+        mrp: 79999,
+        price: 59999,
+        images:  [
+      "/products/Screenshot 2025-12-01 001256.png",
+      "/products/Screenshot 2025-12-01 001243.png"
+        ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Winter Jacket",
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 26 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 26 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_5",
+        name: "Designer heels",
+        description:"These Designer Heels are the epitome of elegance and style, perfect for making a statement at any event. Crafted with premium materials, they feature a sleek silhouette and a comfortable fit, ensuring you can walk with confidence. The intricate design details and luxurious finish make these heels a must-have addition to your footwear collection.",
+        mrp: 49999,
+        price: 29999,
+        images: [
+      "/products/Screenshot 2025-12-01 001947.png",
+      "/products/Screenshot 2025-12-01 002003.png",
+      "/products/Screenshot 2025-12-01 002037.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Heels",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_6",
+        name: "Puma - RX 737",
+        description:  "Women's GG crystal Screener sneaker. The Puma RX 737 sneakers combine retro style with modern comfort, making them a versatile choice for everyday wear. Featuring a classic design inspired by '90s running shoes, these sneakers are crafted with durable materials and cushioned soles for all-day support. Whether you're hitting the streets or the gym, the Puma RX 737 offers a perfect blend of fashion and function.",
+        mrp: 59,
+        price: 29,
+        images:  [
+      "/products/Screenshot 2025-12-01 002141.png",
+      "/products/Screenshot 2025-12-01 002110.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Sneakers",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_7",
+        name:"Premium style Outfit",
+        description:"Women's slingback pump with Horsebit. This elegant pump features a pointed toe and a mid-height heel, perfect for both professional and formal occasions. The slingback design ensures a secure fit, while the iconic Horsebit detail adds a touch of sophistication to your outfit.",
+        mrp: 89999,
+        price: 59999,
+        images: [
+      "/products/cothes55.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Clothes",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 24 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 24 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_8",
+        name:  "Women's boot with merino wool lining",
+        description: "",
+        mrp: 99999,
+        price: 79999,
+        images:  [
+      "/products/Screenshot 2025-12-01 002237.png",
+      "/products/Screenshot 2025-12-01 002303.png"
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Shoes",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 23 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 23 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_9",
+        name: "Men's Gucci Re-Web sneaker",
+        description:  "Give an instant upgrade to your casual look by wearing these smart men’s shoes in Silver/Red/Black colour by Gucci. Expertly crafted from premium nubuk, these lace-up shoes feature a convenient rear pull tab and stylish thread detailing for an enhanced look. The strong, slip-resistant rubber sole offers exceptional grip on all surfaces, while the P.U. foam insole keeps your feet fresh and active all-day long. Woodland branding on the side and the cushioned tongue stands out elegantly. Wear this comfortable, durable pair with your go-to casual outfits to effortlessly look and feel your best.",
+        mrp: 89999,
+        price: 69999,
+        images: [
+      "/products/Screenshot 2025-12-01 002350.png",
+      "/products/Screenshot 2025-12-01 002401.png",
+      "/products/Screenshot 2025-12-01 002425.png",
+       ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Running Shoes",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 22 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 22 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_10",
+        name: "Puma ",
+        description: "Women's GG crystal Screener sneaker. The Puma RX 737 sneakers combine retro style with modern comfort, making them a versatile choice for everyday wear. Featuring a classic design inspired by '90s running shoes, these sneakers are crafted with durable materials and cushioned soles for all-day support. Whether you're hitting the streets or the gym, the Puma RX 737 offers a perfect blend of fashion and function.",
+        mrp: 179999,
+        price: 149999,
+        images: [
+      "/products/Puma1.png",
+      "/products/Puma2.png",
+      ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Sneakers",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 21 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 21 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_11",
+        name:  "LaBerrylush Multicoloured Geometric Printed Puff Sleeves Styled Back Crop Top ",
+        description:"Multicoloured Geometric Printed Puff Sleeves Styled Back Crop Top. Multicoloured crop styled back top. Geometric printed. Square neck, short puff sleeves. Woven. Tie-ups.",
+        mrp: 39999,
+        price: 29999,
+        images: [
+     "/products/Screenshot 2025-12-01 013328.png",
+     "/products/Screenshot 2025-12-01 013311.png",
+     "/products/Screenshot 2025-12-01 013249.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Topwear",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 20 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 20 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_12",
+        name: "Reebok X Tag Heuer Running Shoes",
+        description:"Introducing the debut collaborative project from Reebok. This special edition FuelCell SC Elite design offers an elegant expression of athletic culture, infused with the human emotions – ambition and inspiration – that drive technical high performance.",
+        mrp: 249999,
+        price: 199999,
+        images:  [
+      "/products/Screenshot 2025-12-01 002758.png",
+      "/products/Screenshot 2025-12-01 002751.png",
+      "/products/Screenshot 2025-12-01 002745.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Shoes",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_13",
+        name: "Traquila  Women Bodycon Brown Knee Length Dress",
+        description:  "This Traquila Bodycon Dress is designed to accentuate your curves while providing a comfortable fit. Made from high-quality stretch fabric, it hugs your body in all the right places.",
+        mrp: 89999,
+        price: 59999,
+        images:  [
+      "/products/Screenshot 2025-12-01 013523.png",
+      "/products/Screenshot 2025-12-01 013533.png",
+      "/products/Screenshot 2025-12-01 013533.png",
+    ],
+        category: "Clothes",
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 29 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 29 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_14",
+        name: "Woodland",
+        description: "Give an instant upgrade to your casual look by wearing these smart men’s shoes in Ogreen/Black colour by Woodland. Expertly crafted from premium nubuk, these lace-up shoes feature a convenient rear pull tab and stylish thread detailing for an enhanced look. The strong, slip-resistant rubber sole offers exceptional grip on all surfaces, while the P.U. foam insole keeps your feet fresh and active all-day long. Woodland branding on the side and the cushioned tongue stands out elegantly. Wear this comfortable, durable pair with your go-to casual outfits to effortlessly look and feel your best.",
+        mrp: 59999,
+        price: 39999,
+        images:  [
+      "/products/Screenshot 2025-12-01 003333.png",
+      "/products/Screenshot 2025-12-01 003344.png"
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Sneakers",
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 28 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 28 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_15",
+        name:  "Shae by SASSAFRAS",
+        description:"White Floral Printed Peplum Crop Top With Anarkali Skirt",
+        mrp: 59999,
+        price: 49999,
+   images: [
+      "/products/Screenshot 2025-12-01 013821.png",
+      "/products/Screenshot 2025-12-01 013903.png",
+      "/products/Screenshot 2025-12-01 013927.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Clothes",
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 27 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 27 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_16",
+        name: "Women's FloatZig 2 AHA Running Shoes",
+        description: "",
+        mrp: 39999,
+        price: 29999,
+        images: [
+      "/products/Screenshot 2025-12-01 003947.png",
+      "/products/Screenshot 2025-12-01 003957.png",
+      "/products/Screenshot 2025-12-01 004011.png",
+      "/products/Screenshot 2025-12-01 004026.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Running Shoes",
+        rating: dummyRatingsData,
+        createdAt: 'Sat Jul 26 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 26 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_17",
+        name: "fTAG Heuer x New Balance SC Elite v5",
+        description:"Introducing the debut collaborative project from TAG Heuer and New Balance. This special edition FuelCell SC Elite design offers an elegant expression of athletic culture, infused with the human emotions – ambition and inspiration – that drive technical high performance.",
+        mrp: 25999,
+        price: 22999,
+        images:[
+     "/products/Screenshot 2025-12-01 105516.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Clothes",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_18",
+        name: "VISVASTA Woven Design Zari Banarasi Saree",
+        description:  "The saree comes with an unstitched blouse piece.The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.",
+        mrp: 59999,
+        price: 29999,
+        images: [
+      "/products/Screenshot 2025-12-01 014151.png",
+      "/products/Screenshot 2025-12-01 014202.png", 
+      "/products/Screenshot 2025-12-01 014219.png",
+      "/products/Screenshot 2025-12-01 014233.png"
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Saree",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 25 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_19",
+        name:"Puma Hoodie",
+        description:"This Puma Hoodie is designed for comfort and style, perfect for casual wear or athletic activities. Made from a soft cotton blend, it features a classic fit with a drawstring hood and kangaroo pocket for added convenience. The iconic Puma logo on the chest adds a sporty touch, making it a versatile addition to your wardrobe.",
+        mrp : 29999,
+        price: 25999,
+        images: [
+      "/products/Screenshot 2025-12-01 105040.png",
+      "/products/Screenshot 2025-12-01 105056.png",
+      "/products/Screenshot 2025-12-01 105115.png",
+      "/products/Screenshot 2025-12-01 105131.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 24 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 24 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_20",
+        name:  "Woodland men's leather Jacket",
+        description: "This Woodland men's leather jacket is crafted from premium genuine leather, offering both durability and a timeless style. The jacket features a classic design with a front zipper closure, multiple pockets for convenience, and a comfortable lining to keep you warm. Perfect for casual outings or adding an edgy touch to your outfit, this leather jacket is a versatile addition to any wardrobe.",
+        mrp: 49999,
+        price: 39999,
+        images:  [
+      "/products/Screenshot 2025-12-01 105253.png",
+      "/products/Screenshot 2025-12-01 105311.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 23 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 23 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_21",
+        name:  "Premium Cotton Made Shervani for Men",
+        description: "This Premium Cotton Made Shervani for Men is a perfect blend of traditional elegance and modern style. Crafted from high-quality cotton fabric, it offers comfort and breathability for all-day wear. The intricate embroidery and detailed design make it an ideal choice for weddings, festivals, and special occasions. Pair it with matching accessories to complete your regal look.",
+        mrp: 27950,
+        price: 24950,
+        images:[
+     "/products/Screenshot 2025-12-01 105353.png",
+     "/products/Screenshot 2025-12-01 105500.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Shervani",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 22 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 22 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_22",
+        name: "Jordan Air  ",
+        description: "",
+        mrp: 179999,
+        price: 149999,
+        images: [
+      "/products/Jordan1.png",
+      "/products/Jordan2.png",
+      "/products/Jordan3.png",
+      "/products/Jordan4.png",
+      ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Sneakers",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 21 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 21 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_23",
+        name:  "Shae by SASSAFRAS",
+        description: " Baby Pink Floral Jacket With Embellished Detail. Pink embroidered embellished jacket ,has a V shaped neck, full sleeves, ribbed hem",
+        mrp: 39999,
+        price: 29999,
+        images: [
+      "/products/Screenshot 2025-12-01 105416.png",
+      "/products/Screenshot 2025-12-01 105431.png"
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 20 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 20 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_24",
+        name: "Shae by SASSAFRAS",
+        description: "Red cotton Jacket With Embellished Detail. Red embroidered embellished jacket ,has a V shaped neck, full sleeves, ribbed hem",
+        mrp: 29999,
+        price: 25999,
+        images: [
+      "/products/Screenshot 2025-12-01 105546.png",
+      "/products/Screenshot 2025-12-01 105715.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+     {
+        id: "prod_25",
+        name:  "Berrylush",
+        description:  " Bodycon Midi White Dress With Red Jacket",
+        mrp: 27950,
+        price: 24950,
+        images:[
+      "/products/Screenshot 2025-12-01 105753.png",
+      "/products/Screenshot 2025-12-01 105630.png",
+      "/products/Screenshot 2025-12-01 105641.png",
+      "/products/Screenshot 2025-12-01 105651.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 22 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 22 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_26",
+        name: "Berrylush",
+        description: " Bodycon Midi Chex Dress With Jacket",
+        mrp: 179999,
+        price: 149999,
+        images:[
+      "/products/Screenshot 2025-12-01 105601.png"
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Fashion",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 21 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 21 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_27",
+        name:  "Shae by SASSAFRAS",
+        description:  "White cotton Jacket With Embellished Detail. White embroidered embellished jacket ,has a V shaped neck, full sleeves, ribbed hem",
+        mrp: 29999,
+        price: 24999,
+        images: [
+      "/products/Screenshot 2025-12-01 105848.png",
+      "/products/Screenshot 2025-12-01 105954.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 20 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 20 2025 14:51:25 GMT+0530 (India Standard Time)',
+    },
+    {
+        id: "prod_28",
+        name: "Berrylush",
+        descrition: "Black cotton Jacket With Embellished Detail. Black embroidered embellished jacket ,has a V shaped neck, full sleeves, ribbed hem",
+        mrp: 29999,
+        price: 25999,
+        images:[
+      "/products/Screenshot 2025-12-01 105919.png",
+    ],
+        storeId: "seller_1",
+        inStock: true,
+        store: dummyStoreData,
+        category: "Jacket",
+        rating: [...dummyRatingsData,...dummyRatingsData],
+        createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+        updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+    }
+];
+
+export const ourSpecsData = [
+    { title: "Free Shipping", description: "Enjoy fast, free delivery on every order no conditions, just reliable doorstep.", icon: SendIcon, accent: '#05DF72' },
+    { title: "7 Days easy Return", description: "Change your mind? No worries. Return any item within 7 days.", icon: ClockFadingIcon, accent: '#FF8904' },
+    { title: "24/7 Customer Support", description: "We're here for you. Get expert help with our customer support.", icon: HeadsetIcon, accent: '#A684FF' }
+]
+
+export const addressDummyData = {
+    id: "addr_1",
+    userId: "user_1",
+    name: "John Doe",
+    email: "johndoe@example.com",
+    street: "123 Main St",
+    city: "Sringar",
+    state: "UK",
+    zip: "246191",
+    country: "India",
+    phone: "1234567890",
+    createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)',
+}
+
+export const couponDummyData = [
+    { code: "NEW20", description: "20% Off for New Users", discount: 20, forNewUser: true, forMember: false, isPublic: false, expiresAt: "2026-12-31T00:00:00.000Z", createdAt: "2025-08-22T08:35:31.183Z" },
+    { code: "NEW10", description: "10% Off for New Users", discount: 10, forNewUser: true, forMember: false, isPublic: false, expiresAt: "2026-12-31T00:00:00.000Z", createdAt: "2025-08-22T08:35:50.653Z" },
+    { code: "OFF20", description: "20% Off for All Users", discount: 20, forNewUser: false, forMember: false, isPublic: false, expiresAt: "2026-12-31T00:00:00.000Z", createdAt: "2025-08-22T08:42:00.811Z" },
+    { code: "OFF10", description: "10% Off for All Users", discount: 10, forNewUser: false, forMember: false, isPublic: false, expiresAt: "2026-12-31T00:00:00.000Z", createdAt: "2025-08-22T08:42:21.279Z" },
+    { code: "PLUS10", description: "20% Off for Members", discount: 10, forNewUser: false, forMember: true, isPublic: false, expiresAt: "2027-03-06T00:00:00.000Z", createdAt: "2025-08-22T11:38:20.194Z" }
+]
+
+export const dummyUserData = {
+    id: "user_31dQbH27HVtovbs13X2cmqefddM",
+    name: "Group 8",
+    email: "group8@example.com",
+    image: gs_logo,
+    cart: {}
+}
+
+export const orderDummyData = [
+    {
+        id: "cmemm75h5001jtat89016h1p3",
+        total: 24999,
+        status: "DELIVERED",
+        userId: "user_31dQbH27HVtovbs13X2cmqefddM",
+        storeId: "cmemkqnzm000htat8u7n8cpte",
+        addressId: "cmemm6g95001ftat8omv9b883",
+        isPaid: false,
+        paymentMethod: "COD",
+        createdAt: "2025-08-22T09:15:03.929Z",
+        updatedAt: "2025-08-22T09:15:50.723Z",
+        isCouponUsed: true,
+        coupon: dummyRatingsData[2],
+        orderItems: [
+            { orderId: "cmemm75h5001jtat89016h1p3", productId: "cmemlydnx0017tat8h3rg92hz", quantity: 1, price: 89999, product: productDummyData[0], },
+            { orderId: "cmemm75h5001jtat89016h1p3", productId: "cmemlxgnk0015tat84qm8si5v", quantity: 1, price: 24999, product: productDummyData[1], }
+        ],
+        address: addressDummyData,
+        user: dummyUserData
+    },
+    {
+        id: "cmemm6jv7001htat8vmm3gxaf",
+        total: 39999,
+        status: "DELIVERED",
+        userId: "user_31dQbH27HVtovbs13X2cmqefddM",
+        storeId: "cmemkqnzm000htat8u7n8cpte",
+        addressId: "cmemm6g95001ftat8omv9b883",
+        isPaid: false,
+        paymentMethod: "COD",
+        createdAt: "2025-08-22T09:14:35.923Z",
+        updatedAt: "2025-08-22T09:15:52.535Z",
+        isCouponUsed: true,
+        coupon: couponDummyData[0],
+        orderItems: [
+            { orderId: "cmemm6jv7001htat8vmm3gxaf", productId: "cmemm1f3y001dtat8liccisar", quantity: 1, price: 29999, product: productDummyData[2], },
+            { orderId: "cmemm6jv7001htat8vmm3gxaf", productId: "cmemm0nh2001btat8glfvhry1", quantity: 1, price: 39999, product: productDummyData[3], },
+            { orderId: "cmemm6jv7001htat8vmm3gxaf", productId: "cmemlz8640019tat8kz7emqca", quantity: 1, price: 99999, product: productDummyData[4], }
+        ],
+        address: addressDummyData,
+        user: dummyUserData
+    }
+]
+
+export const storesDummyData = [
+    {
+        id: "cmemkb98v0001tat8r1hiyxhn",
+        userId: "user_31dOriXqC4TATvc0brIhlYbwwc5",
+        name: "Group 8",
+        description: "Group 8 is the education marketplace where you can buy goodies related to coding and tech",
+        username: "group8",
+        address: "123 Maplewood Drive Springfield, IL 62704 USA",
+        status: "approved",
+        isActive: true,
+        logo: gs_logo,
+        email: "group8@example.com",
+        contact: "+0 1234567890",
+        createdAt: "2025-08-22T08:22:16.189Z",
+        updatedAt: "2025-08-22T08:22:44.273Z",
+        user: dummyUserData,
+    },
+    {
+        id: "cmemkqnzm000htat8u7n8cpte",
+        userId: "user_31dQbH27HVtovbs13X2cmqefddM",
+        name: "Ruhi's Happy Shop",
+        description: "At Ruhi's Happy Shop, we believe shopping should be simple, smart, and satisfying. Whether you're hunting for the latest fashion trends, top-notch electronics, home essentials, or unique lifestyle products — we've got it all under one digital roof.",
+        username: "ruhihappyshop",
+        address: "3rd Floor, Happy Shop , New Building, 123 street , c sector ,Sikar, RJ, IN",
+        status: "approved",
+        isActive: true,
+        logo: happy_store,
+        email: "ruhihappyshop@example.com",
+        contact: "+0 123456789",
+        createdAt: "2025-08-22T08:34:15.155Z",
+        updatedAt: "2025-08-22T08:34:47.162Z",
+        user: dummyUserData,
+    }
+]
+
+export const dummyAdminDashboardData = {
+    "orders": 6,
+    "stores": 2,
+    "products": 24,
+    "revenue": "$959.10",
+    "allOrders": [
+        { "createdAt": "2025-08-20T08:46:58.239Z", "total": 145.6 },
+        { "createdAt": "2025-08-22T08:46:21.818Z", "total": 97.2 },
+        { "createdAt": "2025-08-22T08:45:59.587Z", "total": 54.4 },
+        { "createdAt": "2025-08-23T09:15:03.929Z", "total": 214.2 },
+        { "createdAt": "2025-08-23T09:14:35.923Z", "total": 421.6 },
+        { "createdAt": "2025-08-23T11:44:29.713Z", "total": 26.1 },
+        { "createdAt": "2025-08-24T09:15:03.929Z", "total": 214.2 },
+        { "createdAt": "2025-08-24T09:14:35.923Z", "total": 421.6 },
+        { "createdAt": "2025-08-24T11:44:29.713Z", "total": 26.1 },
+        { "createdAt": "2025-08-24T11:56:29.713Z", "total": 36.1 },
+        { "createdAt": "2025-08-25T11:44:29.713Z", "total": 26.1 },
+        { "createdAt": "2025-08-25T09:15:03.929Z", "total": 214.2 },
+        { "createdAt": "2025-08-25T09:14:35.923Z", "total": 421.6 },
+        { "createdAt": "2025-08-25T11:44:29.713Z", "total": 26.1 },
+        { "createdAt": "2025-08-25T11:56:29.713Z", "total": 36.1 },
+        { "createdAt": "2025-08-25T11:30:29.713Z", "total": 110.1 }
+    ]
+}
+
+export const dummyStoreDashboardData = {
+    "ratings": dummyRatingsData,
+    "totalOrders": 2,
+    "totalEarnings": 636,
+    "totalProducts": 24
+}
