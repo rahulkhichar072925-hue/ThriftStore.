@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><img src="https://gocartshop.in/favicon.ico" width="20" height="20" alt="GoCart Favicon">
+  <h1><img src="https://thriftstore.in/favicon.ico" width="20" height="20" alt="thriftstore">
    ThriftStore</h1>
   <p>
     An open-source multi-vendor e-commerce platform built with Next.js and Tailwind CSS.
